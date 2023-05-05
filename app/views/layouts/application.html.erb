@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Authentication</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# this application is refering assets/stylesheet/application.css %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# this application is refering javascript/pack/application.css %>
+
+  </head>
+
+  <body class="d-flex flex-column">
+    <%= render 'layouts/navigation'%>
+    <%= render 'layouts/messages'%>
+    <%= yield %>
+  </body>
+</html>
+<%# this is the main layout file and all are views that we created are surved throw  <%= yield %> 
